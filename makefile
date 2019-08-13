@@ -1,12 +1,26 @@
-my_server: my_server.o my_recv.o
-	gcc my_server.o my_recv.o -o my_server
-my_client: my_client.o my_recv.o
-	gcc my_client.o my_recv.o -o my_client
-my_server.o: my_server.c
-	gcc -c my_server.c
-my_client.o: my_client.c
-	gcc -c my_client.c
-my_recv.o: my_recv.c
-	gcc -c my_recv.c
+CC=gcc
+OBJ=server
+all:
+	$(CC) -o $(OBJ) *.h  thread_pool.c server.c -lpthread -I/usr/include/mysql -L/usr/bin/mysql -lmysqlclient -g
 clean:
 	rm -f *.o
+
+
+
+
+
+
+
+
+
+
+
+
+#my_server: my_server.o my_chat.o
+#	gcc my_server.o my_chat.o -o my_server
+#my_server.o: my_server.c
+#	gcc -c my_server.c
+#my_chat.o: my_chat.c
+#	gcc -c my_chat.c
+#clean:
+#	rm -f *.o
