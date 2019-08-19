@@ -1,0 +1,25 @@
+CC=gcc
+OBJ=client
+all:
+	$(CC) -o $(OBJ) chat.h  client.c -lpthread -g
+clean:
+	rm -f *.o
+
+
+
+
+
+
+
+
+
+
+#my_client: my_client.o my_chat.o
+#	gcc my_client.o my_chat.o -o my_client
+#my_client.o: my_client.c
+#	gcc -c my_client.c -lpthread -I/usr/include/mysql/ -L/usr/lib/mysql/ -lmysqlclient
+#my_chat.o: my_chat.c
+#	gcc -c my_chat.c
+#clean:
+#	rm -f *.o
+	
