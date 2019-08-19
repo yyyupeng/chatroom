@@ -7,7 +7,11 @@
 #include<pthread.h>
 #include<sys/types.h>
 
+<<<<<<< HEAD
 #define MAX_THREAD_NUM 10
+=======
+#define MAX_THREAD_NUM 6
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
 
 typedef struct work
 {

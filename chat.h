@@ -9,9 +9,14 @@
 #include<errno.h>
 
 #define BUFSIZE 1024
+<<<<<<< HEAD
 #define MAX_CHAR 100
 #define FRI_MAX 100
 #define MAX_FILE 4096
+=======
+#define MAX_CHAR 200
+#define FRI_MAX 100
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
 
 typedef struct _user
 {
@@ -19,7 +24,10 @@ typedef struct _user
     char passwd[MAX_CHAR];
     int statu_s;
     int fd;
+<<<<<<< HEAD
     char chat[MAX_CHAR];
+=======
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
     struct _user *next;
 }User;
 
@@ -56,7 +64,11 @@ typedef struct _record
 {
     char name1[MAX_CHAR];
     char name2[MAX_CHAR];
+<<<<<<< HEAD
     char message[MAX_CHAR];
+=======
+    char message[BUFSIZE];
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
 }RECORD_INFO;
 
 typedef struct _data
@@ -66,6 +78,7 @@ typedef struct _data
     char send_name[MAX_CHAR];
     char recv_name[MAX_CHAR];    
     char mes[MAX_CHAR * 3];
+<<<<<<< HEAD
 }DATA;
 
 typedef struct file
@@ -73,15 +86,22 @@ typedef struct file
     int size;
     char mes[MAX_FILE];
 }FIle;
+=======
+
+}DATA;
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
 
 typedef struct _pack
 {
     int type;
     DATA data;
+<<<<<<< HEAD
     FIle file;
     FRI_INFO fri_info;
     GROUP_INFO grp_info;
     RECORD_INFO rec_info[55];
+=======
+>>>>>>> 45ec6c67a6f044be79cc827af900454e1fdca3e3
 }PACK;
 
 //错误处理函数
