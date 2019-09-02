@@ -108,8 +108,8 @@ int main(int argc, char *argv[])
     memset(&serv_addr,0,sizeof(struct sockaddr_in));
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(SERV_PORT);
-    serv_addr.sin_addr.s_addr = inet_addr("192.168.3.15");
-    //serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    //serv_addr.sin_addr.s_addr = inet_addr("192.168.3.15");
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     //创建TCP套接字
     sock_fd = socket(AF_INET,SOCK_STREAM,0);

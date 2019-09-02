@@ -87,8 +87,8 @@ void recv_file(PACK *recv_pack);    //接收文件
 void send_file(PACK *recv_pack);    //发送文件
 void check_mes_fri(PACK *recv_pack);//查看与好友聊天记录
 void check_mes_grp(PACK *recv_pack);//查看群组聊天记录
-void send_pack(int fd, PACK *recv_pack, char *ch);
 void send_more(int fd, int flag, PACK *recv_pack, char *mes);
+void send_pack(int fd, PACK *recv_pack, char *ch);
 
 MYSQL mysql;
 pthread_mutex_t mutex;
@@ -168,8 +168,8 @@ int main()
     memset(&serv_addr,0,len);
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(SERV_PORT);
-    serv_addr.sin_addr.s_addr = inet_addr("192.168.3.15");
-    //serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    //serv_addr.sin_addr.s_addr = inet_addr("192.168.3.15");
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     //将套接字绑定到本地端口
     if(bind(sock_fd,(struct sockaddr *)&serv_addr,len) < 0)
@@ -1196,12 +1196,10 @@ void set_grp_adm(PACK *recv_pack)
             {
                 fd2 = t->fd;
                 send_more(fd2, flag, recv_pack, "6");
-                return;
             }
             else if(strcmp(t->name, recv_pack->data.mes) == 0 && (t->statu_s == OFFLINE))
             {
                 memcpy(&Mex_Box[sign++], recv_pack, sizeof(PACK));
-                return;
             }
             t = t->next;
         }
@@ -1286,12 +1284,10 @@ void kick_grp(PACK *recv_pack)
             {
                 fd2 = t->fd;
                 send_more(fd2, flag, recv_pack, "6");
-                return;
             }
             else if(strcmp(t->name, recv_pack->data.mes) == 0 && (t->statu_s == OFFLINE))
             {
                 memcpy(&Mex_Box[sign++], recv_pack, sizeof(PACK));
-                return;
             }
             t = t->next;
         }
