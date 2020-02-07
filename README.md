@@ -1,1 +1,2 @@
-server: make/   /client: make -f makefile2
+server: make 
+client: make -f makefile2
