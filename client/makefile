@@ -1,7 +1,7 @@
 CC=gcc
 OBJ=client
 all:
-	$(CC) -o $(OBJ) chat.h  client.c -lpthread -g
+	$(CC) -o $(OBJ) ../datastructure/chat.h  client.c -lpthread -g
 clean:
 	rm -f *.o
 

@@ -11,10 +11,10 @@
 #include<arpa/inet.h>
 #include<errno.h>
 #include<signal.h>
-#include<mysql.h>
+#include<mysql/mysql.h>
 #include<sys/epoll.h>
-#include"chat.h"
-#include"thread_pool.h"
+#include"../datastructure/chat.h"
+#include"../threadpool/thread_pool.h"
 
 #define SERV_PORT 9527  //服务器端口号
 #define LISTENQ 10      //连接请求队列的最大长度

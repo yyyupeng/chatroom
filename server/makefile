@@ -1,7 +1,7 @@
 CC=gcc
 OBJ=server
 all:
-	$(CC) -o $(OBJ) *.h  thread_pool.c server.c -lpthread -I/usr/include/mysql -L/usr/bin/mysql -lmysqlclient -g
+	$(CC) -o $(OBJ) *.h ../threadpool/thread_pool.h server.c -lpthread -I/usr/include/mysql -L/usr/bin/mysql -lmysqlclient -g
 clean:
 	rm -f *.o
 
