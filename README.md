@@ -31,7 +31,9 @@ make
 ```
 ## 运行截图
 - 服务端
+
 ![image --server](https://raw.githubusercontent.com/yyyupeng/chatroom/master/image/server.png)
 - 客户端
+
 ![image --client-login](https://raw.githubusercontent.com/yyyupeng/chatroom/master/image/login.png)
 ![image --client-menu](https://raw.githubusercontent.com/yyyupeng/chatroom/master/image/menu.png)
