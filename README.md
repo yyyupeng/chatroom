@@ -16,6 +16,7 @@
 |--|--|
 | client | 客户端 |
 | datastructure | 相关数据结构 |
+| image | 运行截图 |
 | server | 服务端 |
 | threadpool | 线程池 |
 ## 安装及运行
