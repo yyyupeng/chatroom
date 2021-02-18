@@ -20,6 +20,7 @@
 | server | 服务端 |
 | threadpool | 线程池 |
 ## 安装及运行
+运行前请先安装MySQL（8.0及以上版本）
 - 服务端
 ```
 cd server
